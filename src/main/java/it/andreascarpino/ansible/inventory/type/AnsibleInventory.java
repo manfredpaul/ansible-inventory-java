@@ -17,10 +17,7 @@
  */
 package it.andreascarpino.ansible.inventory.type;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author Andrea Scarpino
@@ -33,8 +30,8 @@ public class AnsibleInventory {
 
 	public AnsibleInventory() {
 		super();
-		this.hosts = new HashMap<>();
-		this.groups = new HashMap<>();
+		this.hosts = new LinkedHashMap<>();
+		this.groups = new LinkedHashMap<>();
 	}
 
 	public AnsibleInventory(List<AnsibleHost> hosts) {

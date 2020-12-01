@@ -18,6 +18,7 @@
 package it.andreascarpino.ansible.inventory.type;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -33,7 +34,7 @@ public class AnsibleHost {
 	public AnsibleHost(String name) {
 		super();
 		this.name = name;
-		this.variables = new HashSet<>();
+		this.variables = new LinkedHashSet<>();
 	}
 
 	public AnsibleHost(String name, List<AnsibleVariable> variables) {
